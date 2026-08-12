@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shikha ❤️ Sandeep</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#08040a;color:#fff;font-family:Georgia,serif;overflow-x:hidden}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px 18px;position:relative;overflow:hidden}
+.hero{background:radial-gradient(circle at 50% 30%,#5c1735 0,#170811 45%,#08040a 100%)}
+.story{background:linear-gradient(180deg,#08040a,#240b18,#08040a)}
+.proposal{background:radial-gradient(circle at 50% 30%,#7b2048,#220814 45%,#08040a)}
+.glass{width:min(760px,94vw);padding:38px 24px;border:1px solid #ffffff45;border-radius:32px;background:#120710b8;backdrop-filter:blur(10px);box-shadow:0 25px 100px #000b;position:relative;z-index:2}
+.eyebrow{letter-spacing:5px;text-transform:uppercase;font:12px Arial,sans-serif;opacity:.8}
+h1{font-size:clamp(52px,13vw,100px);font-weight:normal;margin:8px 0}
+h2{font-size:clamp(30px,7vw,54px);margin:16px 0}
+.subtitle{font-size:clamp(22px,5vw,34px);font-style:italic}
+p{font-size:18px;line-height:1.8;max-width:620px;margin:22px auto}
+.heart{font-size:55px;animation:pulse 1.4s infinite}
+.next{display:inline-block;color:#fff;text-decoration:none;border:1px solid #ffffff55;border-radius:30px;padding:13px 24px;margin-top:12px}
+.photo-wrap{width:min(360px,80vw);margin:24px auto;border-radius:24px;padding:7px;background:linear-gradient(135deg,#fff,#eaa2bb,#fff,#b75a7d);box-shadow:0 0 50px #ff6f9b66;animation:photoFloat 4s ease-in-out infinite}
+.photo-wrap img{display:block;width:100%;border-radius:19px}
+.reveal{animation:reveal 1.6s both}
+button{font-family:inherit;font-size:18px;border-radius:30px;padding:15px 28px;margin:8px;cursor:pointer}
+.yes{background:#fff;color:#8a1740;border:0;box-shadow:0 0 25px #fff8}
+.think{background:#ffffff15;color:#fff;border:1px solid #ffffff55}
+#answer{min-height:45px;font-size:22px;margin-top:18px}
+.particle{position:fixed;top:-30px;z-index:10;pointer-events:none;animation:fall linear forwards}
+.spark{position:absolute;font-size:20px;animation:spark 2s ease-in-out infinite}
+.s1{top:12%;left:15%}.s2{top:22%;right:14%;animation-delay:.5s}.s3{bottom:18%;left:20%;animation-delay:1s}.s4{bottom:25%;right:18%;animation-delay:1.4s}
+@keyframes pulse{50%{transform:scale(1.2)}}
+@keyframes photoFloat{50%{transform:translateY(-12px) rotate(.7deg)}}
+@keyframes reveal{from{opacity:0;transform:scale(.75) translateY(40px);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+@keyframes spark{50%{transform:scale(1.5) rotate(15deg);opacity:.35}}
+@keyframes fall{to{transform:translateY(115vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="glass">
+<div class="eyebrow">A question from my heart</div>
+<div class="heart">❤️</div>
+<h1>Shikha</h1>
+<div class="subtitle">There is something I want to ask you...</div>
+<p id="intro">Scroll slowly. This is just for you. ❤️</p>
+<a class="next" href="#story">Continue ↓</a>
+</div>
+</section>
+
+<section id="story" class="story">
+<span class="spark s1">✨</span><span class="spark s2">💕</span><span class="spark s3">✨</span><span class="spark s4">❤️</span>
+<div class="glass">
+<div class="eyebrow">A little from my heart</div>
+<h2>Why you?</h2>
+<p>Because somewhere along the way, you became someone I don't just want in my life — I want to build my life with you.</p>
+<p>I want the laughter, the quiet evenings, the adventures, the celebrations and even the difficult days — together.</p>
+<a class="next" href="#proposal">There's one more thing… ↓</a>
+</div>
+</section>
+
+<section id="proposal" class="proposal">
+<div class="glass reveal">
+<div class="eyebrow">Sandeep Kumar Pal ❤️</div>
+<div class="photo-wrap"><img src="proposal-photo.png" alt="Shikha"></div>
+<div class="heart">💗</div>
+<h2>Shikha Singh</h2>
+<p><strong>After everything I've said, there is only one question left…</strong></p>
+<h1 style="font-size:clamp(38px,9vw,70px)">Will you marry me? 💍</h1>
+<p>I promise to keep choosing you, respecting you, supporting you and making you smile — one day at a time.</p>
+<button class="yes" onclick="yes()">YES, I WILL ❤️</button>
+<button class="think" onclick="think()">I NEED A MOMENT 😊</button>
+<div id="answer"></div>
+</div>
+</section>
+
+<script>
+function yes(){
+ document.getElementById('answer').innerHTML='You just made my heart the happiest. ❤️💍✨<br><small>Forever starts here.</small>';
+ burst();
+}
+function think(){
+ document.getElementById('answer').innerHTML='Take all the time you need. My feelings are sincere. ❤️';
+}
+function burst(){
+ for(let i=0;i<130;i++){
+  const x=document.createElement('div');x.className='particle';
+  x.textContent=['❤️','💕','💖','✨','🌹','💍','🥰'][Math.floor(Math.random()*7)];
+  x.style.left=Math.random()*100+'vw';
+  x.style.fontSize=(13+Math.random()*25)+'px';
+  x.style.animationDuration=(2+Math.random()*4)+'s';
+  document.body.appendChild(x);setTimeout(()=>x.remove(),6500);
+ }
+}
+</script>
+</body>
+</html>
